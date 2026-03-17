@@ -1,1 +1,211 @@
-# teste
+export default function SiteBoiDeCorte() {
+  const highlights = [
+    "Rodízio de carnes com cortes variados",
+    "Buffet farto com saladas e pratos quentes",
+    "Opções para refeição no local, viagem e entrega sem contato",
+    "Ambiente ideal para almoço em família e encontros especiais",
+  ];
+
+  const menuItems = [
+    {
+      title: "Rodízio Completo",
+      description:
+        "Seleção de carnes servidas à mesa com cortes tradicionais e especiais.",
+    },
+    {
+      title: "Buffet Variado",
+      description:
+        "Saladas, pratos quentes, acompanhamentos e opções para todos os gostos.",
+    },
+    {
+      title: "Destaques da Casa",
+      description:
+        "Paleta de cordeiro ao molho de hortelã, linguiça à cuiabana e sobremesas queridinhas.",
+    },
+    {
+      title: "Sobremesas",
+      description:
+        "Torta holandesa, petit gateau e outras delícias para fechar a experiência.",
+    },
+  ];
+
+  const reviews = [
+    {
+      quote:
+        "Lugar maravilhoso para jantar com a família, ótimo atendimento e ambiente agradável.",
+      author: "Cliente",
+    },
+    {
+      quote:
+        "Bons cortes, boa mesa de saladas e atendimento muito atencioso.",
+      author: "Cliente",
+    },
+    {
+      quote:
+        "Tem ar-condicionado e buffet com opções variadas, incluindo comida japonesa.",
+      author: "Cliente",
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-neutral-950 text-white">
+      <section className="relative overflow-hidden border-b border-white/10 bg-[radial-gradient(circle_at_top,rgba(255,180,80,0.18),transparent_35%),linear-gradient(180deg,#171717_0%,#0a0a0a_100%)]">
+        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-16 md:grid-cols-2 md:px-10 md:py-24">
+          <div className="flex flex-col justify-center">
+            <span className="mb-4 inline-flex w-fit rounded-full border border-amber-400/30 bg-amber-400/10 px-4 py-1 text-sm tracking-wide text-amber-200">
+              Tradição em sabor e atendimento
+            </span>
+            <h1 className="max-w-xl text-4xl font-bold leading-tight md:text-6xl">
+              Churrascaria <span className="text-amber-300">Boi de Corte</span>
+            </h1>
+            <p className="mt-5 max-w-xl text-base leading-7 text-neutral-300 md:text-lg">
+              Rodízio de carnes e buffet farto em São Carlos, com destaque para a
+              paleta de cordeiro ao molho de hortelã e a tradicional linguiça à cuiabana.
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href="tel:+551633683637"
+                className="rounded-2xl bg-amber-300 px-6 py-3 font-semibold text-neutral-950 shadow-lg transition hover:scale-[1.02]"
+              >
+                Ligar agora
+              </a>
+              <a
+                href="https://maps.google.com/?q=R.%20Monsenhor%20Alcindo%20Carlos%20Veloso%20Siqueira%2C%2061%20-%20Jardim%20Sao%20Paulo%2C%20S%C3%A3o%20Carlos%20-%20SP"
+                className="rounded-2xl border border-white/15 px-6 py-3 font-medium text-white transition hover:bg-white/5"
+              >
+                Como chegar
+              </a>
+            </div>
+
+            <div className="mt-8 flex flex-wrap items-center gap-4 text-sm text-neutral-300">
+              <div className="rounded-xl border border-white/10 bg-white/5 px-4 py-2">
+                ⭐ 4,4 de avaliação
+              </div>
+              <div className="rounded-xl border border-white/10 bg-white/5 px-4 py-2">
+                💰 Faixa de preço: R$ 40–60
+              </div>
+              <div className="rounded-xl border border-white/10 bg-white/5 px-4 py-2">
+                📍 São Carlos - SP
+              </div>
+            </div>
+          </div>
+
+          <div className="grid gap-4 md:pl-8">
+            <div className="rounded-[28px] border border-white/10 bg-white/5 p-6 shadow-2xl backdrop-blur">
+              <div className="mb-4 text-sm uppercase tracking-[0.2em] text-amber-200">
+                Destaques
+              </div>
+              <div className="grid gap-3">
+                {highlights.map((item) => (
+                  <div
+                    key={item}
+                    className="rounded-2xl border border-white/10 bg-black/20 px-4 py-4 text-neutral-200"
+                  >
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-16 md:px-10">
+        <div className="mb-10 flex items-end justify-between gap-6">
+          <div>
+            <p className="text-sm uppercase tracking-[0.25em] text-amber-200">
+              Experiência da casa
+            </p>
+            <h2 className="mt-3 text-3xl font-bold md:text-4xl">Sabor, variedade e conforto</h2>
+          </div>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          {menuItems.map((item) => (
+            <div
+              key={item.title}
+              className="rounded-[24px] border border-white/10 bg-white/5 p-6 shadow-xl"
+            >
+              <h3 className="text-xl font-semibold text-amber-200">{item.title}</h3>
+              <p className="mt-3 leading-7 text-neutral-300">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="border-y border-white/10 bg-white/5">
+        <div className="mx-auto grid max-w-7xl gap-8 px-6 py-16 md:grid-cols-2 md:px-10">
+          <div className="rounded-[28px] border border-white/10 bg-neutral-900 p-8 shadow-xl">
+            <p className="text-sm uppercase tracking-[0.25em] text-amber-200">Informações</p>
+            <h2 className="mt-3 text-3xl font-bold">Visite a Boi de Corte</h2>
+            <div className="mt-6 space-y-4 text-neutral-300">
+              <p>
+                <strong className="text-white">Endereço:</strong> R. Monsenhor Alcindo Carlos
+                Veloso Siqueira, 61 - Jardim Sao Paulo, São Carlos - SP, 13570-010
+              </p>
+              <p>
+                <strong className="text-white">Telefone:</strong> (16) 3368-3637
+              </p>
+              <p>
+                <strong className="text-white">Atendimento:</strong> Refeição no local, para viagem e
+                entrega sem contato
+              </p>
+              <p>
+                <strong className="text-white">Horário:</strong> Aberto de quarta a segunda, a partir das 11h
+              </p>
+            </div>
+          </div>
+
+          <div className="rounded-[28px] border border-white/10 bg-neutral-900 p-8 shadow-xl">
+            <p className="text-sm uppercase tracking-[0.25em] text-amber-200">Avaliações</p>
+            <h2 className="mt-3 text-3xl font-bold">O que os clientes dizem</h2>
+            <div className="mt-6 grid gap-4">
+              {reviews.map((review, index) => (
+                <div key={index} className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <p className="text-neutral-200">“{review.quote}”</p>
+                  <p className="mt-3 text-sm text-neutral-400">— {review.author}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-16 md:px-10">
+        <div className="rounded-[32px] border border-amber-300/20 bg-gradient-to-r from-amber-300/15 to-orange-300/10 p-8 shadow-2xl md:p-12">
+          <div className="grid gap-8 md:grid-cols-[1.2fr_0.8fr] md:items-center">
+            <div>
+              <p className="text-sm uppercase tracking-[0.25em] text-amber-100">Reserve sua visita</p>
+              <h2 className="mt-3 text-3xl font-bold text-white md:text-4xl">
+                Venha viver uma experiência completa em churrasco
+              </h2>
+              <p className="mt-4 max-w-2xl leading-7 text-neutral-200">
+                Ideal para almoços em família, encontros com amigos e momentos especiais com muito sabor.
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-3 md:items-end">
+              <a
+                href="tel:+551633683637"
+                className="w-full rounded-2xl bg-white px-6 py-3 text-center font-semibold text-neutral-950 transition hover:scale-[1.02] md:w-auto"
+              >
+                Fazer reserva por telefone
+              </a>
+              <a
+                href="https://maps.google.com/?q=R.%20Monsenhor%20Alcindo%20Carlos%20Veloso%20Siqueira%2C%2061%20-%20Jardim%20Sao%20Paulo%2C%20S%C3%A3o%20Carlos%20-%20SP"
+                className="w-full rounded-2xl border border-white/20 px-6 py-3 text-center font-medium text-white transition hover:bg-white/10 md:w-auto"
+              >
+                Ver localização
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer className="border-t border-white/10 px-6 py-8 text-center text-sm text-neutral-400 md:px-10">
+        © {new Date().getFullYear()} Churrascaria Boi de Corte · Sabor, tradição e qualidade em São Carlos.
+      </footer>
+    </div>
+  );
+}
